@@ -1,5 +1,2 @@
 .idea
-.mvn
-mvnw
-mvnw.cmd
-spring-boot-mybatis-initial.iml
+*.iml
