@@ -10,14 +10,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.List;
 
 /**
- * Created by Jason on 2016-09-03.
+ * @author jason, Moon
+ * @since 2016-09-03.
  */
 @Controller
 public class MemberController {
-    @Autowired
-    MemberMapper memberMapper;
+    private final MemberMapper memberMapper;
 
-    @RequestMapping("/")
+    @Autowired
+    public MemberController(MemberMapper memberMapper) {
+        this.memberMapper = memberMapper;
+    }
+
+    @RequestMapping("/members")
     @ResponseBody
     public List<Member> findMembers() {
         return memberMapper.findMembers();

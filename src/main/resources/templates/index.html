@@ -1,0 +1,26 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Index</title>
+
+    <link th:href="@{css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body th:inline="text">
+    <p>Hello, [[${userName}]]!</p>
+    <table style="width: 100%;" class="table">
+        <colgroup>
+            <col />
+            <col />
+            <col />
+        </colgroup>
+        <thead>
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>조회수</th>
+        </tr>
+        </thead>
+    </table>
+</body>
+</html>
